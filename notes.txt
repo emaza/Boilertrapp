@@ -1,0 +1,22 @@
+Boilertrapp is a <a href="http://en.wikipedia.org/wiki/Boilerplate_(text)">boilerplate</a>
+ for Google App Engine using boststrap and good practics. 
+ Inspired in <a href="http://html5boilerplate.com/">html5boilerplatea</a> and <a href="https://github.com/coto/gae-boilerplate">gae-boilerplate</a>
+
+
+Release notes: 1.0
+
+--Using jQuery 2.0.3 (jQuery 2.x does NOT support Internet Explorer 6, 7, or 8) 
+	tip: use  jQuery 1.x if IE 6/7/8 users are visiting the site.
+
+UI Changes
+
+
+Known Issues
+
+
+contributions
+
+
+Licenses
+
+
