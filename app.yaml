@@ -1,13 +1,76 @@
 application: boilertrapp
-version: 1
+version: dev1
 runtime: python27
 api_version: 1
 threadsafe: yes
 
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?app\.yml
+- ^(.*/)?#.*#
+- ^(.*/)?.*~
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?.*/RCS/.*
+- ^(.*/)?\..*
+- ^(.*/)?tests$
+- ^(.*/)?test$
+- ^test/(.*/)?
+- ^COPYING.LESSER
+- ^README\..*
+- \.gitignore
+- ^\.git/.*
+- \.*\.lint$
+- ^fabfile\.py
+- ^testrunner\.py
+- ^grunt\.js
+- ^node_modules/(.*/)?
+
 handlers:
+
 - url: /favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+  mime_type: image/vnd.microsoft.icon
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+
+- url: /apple-touch-icon-precomposed\.png
+  static_files: static/images/apple-touch-icon-precomposed.png
+  upload: static/images/apple-touch-icon-precomposed.png
+  
+- url: /apple-touch-icon-ipad\.png
+  static_files: static/images/apple-touch-icon-ipad.png
+  upload: static/images/apple-touch-icon-ipad.png
+  
+- url: /apple-touch-icon-iphone\.png
+  static_files: static/images/apple-touch-icon-iphone.png
+  upload: static/images/apple-touch-icon-iphone.png
+  
+- url: /bost/assets/js
+  mime_type: text/javascript
+  static_dir: static/bost/assets/js
+  
+- url: /bost/css
+  mime_type: text/css
+  static_dir: static/bost/css
+
+- url: /bost/fonts/(.*\.(woff|ttf|svg|eot))
+  static_files: static/bost/fonts/\1
+  upload: static/bost/fonts(.*\.(woff|ttf|svg|eot))
+  
+- url: /bost/js
+  mime_type: text/javascript
+  static_dir: static/bost/js
+
+- url: /css/images/(.*\.(gif|png|svg|jpg|jpeg|tif))
+  static_files: static/css/images/\1
+  upload: static/css/images(.*\.(gif|png|svg|jpg|jpeg))
+  
+- url: /images/(.*\.(gif|png|jpg|jpeg))
+  static_files: static/images/\1
+  upload: static/images/(.*\.(gif|png|jpg|jpeg))
+  
+- url: /js
+  mime_type: text/javascript
+  static_dir: static/js  
 
 - url: .*
   script: main.app
@@ -15,3 +78,5 @@ handlers:
 libraries:
 - name: webapp2
   version: "2.5.2"
+- name: jinja2
+  version: latest
