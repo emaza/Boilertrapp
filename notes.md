@@ -11,7 +11,6 @@ Release notes: 1.0
 
 Known Issues
 ------------------------------------
-Using jQuery 2.0.3 (jQuery 2.x does NOT support Internet Explorer 6, 7, or 8) 
-tip: use  jQuery 1.x if IE 6/7/8 users are visiting the site.
-	
++ Using jQuery 2.0.3 (jQuery 2.x does NOT support Internet Explorer 6, 7, or 8) 
+**tip:** *Use  jQuery 1.x if IE 6/7/8 users are visiting the site.*
 
