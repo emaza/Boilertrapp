@@ -23,7 +23,7 @@ template_env = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        test = 'only test'
+        test = 'This is only a test'
         template = template_env.get_template('static/layouts/index.html')
         context = {
         		'test': test,
